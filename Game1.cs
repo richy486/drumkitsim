@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using Touchy;
 
 namespace BoomBoom
 {
@@ -24,6 +25,8 @@ namespace BoomBoom
         AudioEngine audioEngine;
         SoundBank soundBank;
         WaveBank waveBank;
+
+        TouchyFeely m_Touch = new TouchyFeely();
 
         enum KEYS
         {
@@ -94,6 +97,15 @@ namespace BoomBoom
             m_SoundNames[(int)KEYS.CRASH_1] = "Ambient Crash 1 Hard";
             m_SoundNames[(int)KEYS.CRASH_2] = "Ambient Crash 2 Hard";
             m_SoundNames[(int)KEYS.CROSS_STICK] = "Ambient Cross Stick Hard";
+
+            if (m_Touch.InitializeTouchPad())
+            {
+                int fake = 0;
+            }
+            else
+            {
+                int fake = 0;
+            }
         }
 
         /// <summary>
